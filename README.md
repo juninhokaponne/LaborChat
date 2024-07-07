@@ -1,4 +1,3 @@
-
 # LaborChatAI
 
 This project is an intelligent chat assistant designed to enhance FinTechX customer communication and support. Using artificial intelligence and language models (LLM), this application offers automated and personalized responses in real time, providing a fluid and satisfying user experience.
@@ -7,14 +6,14 @@ This project is an intelligent chat assistant designed to enhance FinTechX custo
 
 ## 📋 Index
 
-- [Introduction](#introduction)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Use](#use)
-- [Features](#features)
-- [Contribution](#contribution)
-- [License](#license)
-- [Contact](#contact)
+- [Introduction](#-introduction)
+- [Technologies](#-technologies)
+- [Installation](#-installation)
+- [Use](#-use)
+- [Features](#-features)
+- [Contribution](#-contribution)
+- [License](#-license)
+- [Contact](#-contact)
 
 ---
 
@@ -86,13 +85,30 @@ Start the server
 ```bash
  npm start
 ```
+
+## 🌟 Features
+
+- **Real-Time Responses**: The virtual assistant responds to customer inquiries using natural language.
+- **Personalized Service**: Ability to customize responses based on user preferences and history.
+- **Intuitive Interface**: Responsive and user-friendly design, providing an enjoyable user experience.
+- **Process Automation**: Automation of responses for frequently asked questions, saving time and resources.
+
+### Example Questions Answered
+
+- What are FinTechX's business hours?
+- Where are FinTechX's offices located?
+- Who founded FinTechX and when?
+- How does FinTechX protect my personal information?
+- I received a suspicious email from FinTechX, what should I do?
+- How can I learn more about investments and savings?
+- How can I sign up to receive promotions and discounts?
+
 ## API documentation
 
 #### You need to pass your API_KEY(openAI) as a TOKEN in the .ENV.
 
-
-| Param   | Type       | Description                           |
-| :---------- | :--------- | :---------------------------------- |
+| Param   | Type     | Description                 |
+| :------ | :------- | :-------------------------- |
 | `token` | `string` | **Mandatory**. Your API key |
 
 ## Environment variables
@@ -103,7 +119,10 @@ TOKEN is your openAI API_KEY.
 
 `TOKEN`
 
-## License
+## 📞 Contact
+
+email: juninhokaponnemg@hotmail.com
+
+## 📜 License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
