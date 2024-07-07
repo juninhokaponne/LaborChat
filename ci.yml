@@ -28,7 +28,7 @@ jobs:
         run: npm install -g expo-cli
 
       - name: Build the project
-        run: expo build:android --no-wait
+        run: eas build --platform android --profile preview
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
