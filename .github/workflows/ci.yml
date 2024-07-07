@@ -1,0 +1,44 @@
+name: CI/CD for React Native with Expo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Expo CLI
+        run: npm install -g expo-cli
+
+      - name: Build the project
+        run: expo build:android --no-wait
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: expo-artifacts
+          path: dist/*.apk
+
+      - name: Deploy to Expo
+        run: expo publish
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
