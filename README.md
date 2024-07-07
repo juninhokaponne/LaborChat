@@ -9,9 +9,7 @@ This project is an intelligent chat assistant designed to enhance FinTechX custo
 - [Introduction](#-introduction)
 - [Technologies](#-technologies)
 - [Installation](#-installation)
-- [Use](#-use)
 - [Features](#-features)
-- [Contribution](#-contribution)
 - [License](#-license)
 - [Contact](#-contact)
 
