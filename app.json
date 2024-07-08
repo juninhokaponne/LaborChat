@@ -11,7 +11,8 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.juninhokaponne.imhere2"
     },
     "packagerOpts": {
       "config": "metro.config.js",
@@ -27,9 +28,16 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Poppins-Regular.ttf"]
+          "fonts": [
+            "./assets/fonts/Poppins-Regular.ttf"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7a1cdaaa-50cf-48be-bab5-a37f0f387745"
+      }
+    }
   }
 }
