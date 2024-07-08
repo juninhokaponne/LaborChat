@@ -34,7 +34,7 @@ jobs:
 
       - name: Build the project
         run: |
-          eas build --platform android --non-interactive
+          eas build --platform android
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
@@ -49,6 +49,6 @@ jobs:
 
       - name: Deploy to Expo
         if: success()
-        run: eas submit --platform android --non-interactive
+        run: eas submit --platform android
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
