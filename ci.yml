@@ -28,10 +28,13 @@ jobs:
         run: npm install -g eas-cli
 
       - name: Authenticate with Expo
-        run: eas login --username ${{ secrets.EXPO_CLI_USERNAME }} --password ${{ secrets.EXPO_CLI_PASSWORD }}
+        run: |
+          eas login --username ${{ secrets.EXPO_CLI_USERNAME }} --password ${{ secrets.EXPO_CLI_PASSWORD }}
+          eas whoami
 
       - name: Build the project
-        run: eas build --platform android --profile preview
+        run: |
+          eas build --platform android --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
@@ -41,11 +44,11 @@ jobs:
         with:
           name: expo-artifacts
           path: |
-            ./**/build/**/**/*.apk
-            ./**/build/**/**/*.aab
+            ./**/build/**/*.apk
+            ./**/build/**/*.aab
 
       - name: Deploy to Expo
         if: success()
-        run: eas submit --platform android --profile preview
+        run: eas submit --platform android --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
