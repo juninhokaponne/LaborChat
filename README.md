@@ -103,19 +103,19 @@ Start the server
 
 ## API documentation
 
-#### You need to pass your API_KEY(openAI) as a TOKEN in the .ENV.
+#### You need to pass your OPEN_AI_KEY(openAI) as a TOKEN in the .ENV.
 
 | Param   | Type     | Description                 |
 | :------ | :------- | :-------------------------- |
-| `token` | `string` | **Mandatory**. Your API key |
+| `OPEN_AI_KEY` | `string` | **Mandatory**. Your API key |
 
 ## Environment variables
 
 To run this project, you will need to add the following environment variables to your .env
 
-TOKEN is your openAI API_KEY.
+OPEN_AI_KEY is your openAI API_KEY.
 
-`TOKEN`
+`OPEN_AI_KEY`
 
 ## 📞 Contact
 

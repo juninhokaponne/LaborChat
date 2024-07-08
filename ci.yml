@@ -24,8 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Expo CLI
-        run: npm install -g expo-cli
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
+
+      - name: Authenticate with Expo
+        run: eas login --username ${{ secrets.EXPO_CLI_USERNAME }} --password ${{ secrets.EXPO_CLI_PASSWORD }}
 
       - name: Build the project
         run: eas build --platform android --profile preview
@@ -33,12 +36,16 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Archive production artifacts
+        if: success()
         uses: actions/upload-artifact@v2
         with:
           name: expo-artifacts
-          path: dist/*.apk
+          path: |
+            ./**/build/**/**/*.apk
+            ./**/build/**/**/*.aab
 
       - name: Deploy to Expo
-        run: expo publish
+        if: success()
+        run: eas submit --platform android --profile preview
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
