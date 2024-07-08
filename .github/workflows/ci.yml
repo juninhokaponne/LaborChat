@@ -29,7 +29,11 @@ jobs:
 
       - name: Authenticate with Expo
         run: |
-          eas login --username ${{ secrets.EXPO_CLI_USERNAME }} --password ${{ secrets.EXPO_CLI_PASSWORD }}
+          echo "expect \"? Expo username/Email Address:\"" > script.exp
+          echo "send \"$EXPO_CLI_USERNAME\\r\"" >> script.exp
+          echo "expect \"? Password:\"" >> script.exp
+          echo "send \"$EXPO_CLI_PASSWORD\\r\"" >> script.exp
+          expect script.exp
           eas whoami
 
       - name: Build the project
