@@ -2,6 +2,12 @@
 
 This project is an intelligent chat assistant designed to enhance FinTechX customer communication and support. Using artificial intelligence and language models (LLM), this application offers automated and personalized responses in real time, providing a fluid and satisfying user experience.
 
+
+# Preview 
+
+https://github.com/user-attachments/assets/ba1726cb-cb9c-443e-89e2-7158206fcc18
+
+
 ---
 
 ## 📋 Index
